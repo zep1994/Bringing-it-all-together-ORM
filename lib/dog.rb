@@ -49,6 +49,7 @@ class Dog
       Dog.new(id: result[0], name: result[1], breed: result[2])
    end
 
+<<<<<<< HEAD
    def self.find_or_create_by(name:, breed:)
       dog = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
       if !dog.empty?
@@ -74,4 +75,9 @@ class Dog
                sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
                DB[:conn].execute(sql, self.name, self.breed, self.id)
             end
+=======
+   def self.find_or_create_by
+
+   end
+>>>>>>> ddb6342c2cbb26d0d19f9cb7cc2fa583da45b01b
    end
